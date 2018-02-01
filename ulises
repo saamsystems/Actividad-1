@@ -1,0 +1,11 @@
+Lenguajes imperativos:
+Los primeros lenguajes imperativos fueron los lenguajes de máquina de los computadores originales. En estos lenguajes, las instrucciones fueron muy simples, lo cual hizo la implementación de hardware fácil, pero obstruyendo la creación de programas complejos. 
+
+Lenguaje declarativo:
+Un lenguaje declarativo es un tipo de lenguaje de programación basado más en las matemáticas y en la lógica que los lenguajes imperativos, más cercanos estos al razonamiento humano. Los lenguajes declarativos no dicen cómo hacer una cosa, sino, más bien, qué cosa hacer. A diferencia de los imperativos, no suele haber declaración de variables ni tipos.
+
+Lenguajes orientados a objetos:
+Los lenguajes de programación orientados a objetos tienen su origen en un lenguaje que fue diseñado por los profesores Ole-Johan Dahl y Kristen Nygaard en Noruega. Este lenguaje de programación orientado a objetos fue el “Simula 67” que fue un lenguaje creado para hacer simulaciones de naves.
+Los lenguajes de programación orientadas a objetos son lenguajes dinámicos en los que estos objetos se pueden crear y modificar sobre la marcha. Esta programación orientada a objetos (POO) tomo auge a mediados de los años ochenta debido a la propagación de las interfaces gráficas de usuarios, para lo que los lenguajes de programación orientados a objetos están especialmente dotados.
+Los principales lenguajes de programación orientados a objetos son:
+Ada, C++, C#, VB.NET, Clarion, Delphi, Eiffel, Java, Lexico (en castellano), Objective-C, Ocaml, Oz, PHP, PowerBuilder, Python, Ruby y Smalltalk.
