@@ -1,3 +1,15 @@
+
+Lenguaje máquina
+•	Las instrucciones se expresan en código binario.
+•	Los datos se referencian por medio de las direcciones de memoria 
+•	no pueden incluirse comentariosque faciliten su legibilidad y el posterior mantenimiento por parte del mismo programador u otros.
+
+Lenguaje ensamblador	
+•	Direccionamiento simbólico. En lugar de utilizar direcciones binarias absolutas a la memoria, los datos pueden ser identificados con nombres como Importe, Población, A, Y, etc.
+•	Se permite el uso de comentarios entre las líneas de instrucciones, lo cual hace posible la redacción de programas más legibles.
+
+
+
 Lenguajes imperativos:
 Los primeros lenguajes imperativos fueron los lenguajes de máquina de los computadores originales. En estos lenguajes, las instrucciones fueron muy simples, lo cual hizo la implementación de hardware fácil, pero obstruyendo la creación de programas complejos. 
 
