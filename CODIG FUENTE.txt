@@ -1,0 +1,1407 @@
+
+
+//constructor
+
+      
+       public lexe(string cadena)
+       {
+
+           temp = cadena.Length - 1;
+           Cadena = cadena;
+
+    
+
+       }
+       internal string Cadena
+       {
+           get { return _Cadena; }
+           set { _Cadena = value; }
+
+       }
+
+
+       internal int Estado_0(char Simbolo)
+           //Estado 0 simbolos
+       {
+           char simbolo = Simbolo;
+           switch (simbolo)
+           {
+               case 'C':
+                   buffer += simbolo.ToString();
+                   return Estado_1();
+                   break;
+               default:
+
+               /* case 'S':
+                    buffer += simbolo.ToString();
+                    return Estado_116();
+                    break;
+                default:
+                */
+               case 'E':
+                   buffer += simbolo.ToString();
+                   return Estado_27();
+                   break;
+               //default:
+               /*
+                              case 'P':
+                                  buffer += simbolo.ToString();
+                                  return Estado_90();
+                                  break;
+                              default:
+                */
+               case 'D':
+                   buffer += simbolo.ToString();
+                   return Estado_15();
+                   break;
+               //default:
+                   return 0;
+                   break;
+               /*
+                              case 'R':
+                                  buffer += simbolo.ToString();
+                                  return Estado_108();
+                                  break;
+                              default:
+               */
+               /*
+           case 'M':
+               buffer += simbolo.ToString();
+               return Estado_76();
+               break;
+           default:
+               */
+               case 'F':
+                   buffer += simbolo.ToString();
+                   return Estado_36();
+                   break;
+               //default:
+
+
+                   /*
+               case 'H':
+                   buffer += simbolo.ToString();
+                   return Estado_63();
+                   break;
+               default:
+                    */
+                   return 0;     
+           }
+       }
+
+       //Estado 1
+
+       private int Estado_1()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               case 'L':
+                   buffer += simbolo.ToString();
+                   return Estado_2();
+                   break;
+               default:
+                   return 0;
+                 break;
+
+               case 'O':
+                 buffer += simbolo.ToString();
+                 return Estado_6();
+                 break;
+              // default:
+                 return 0;
+                 break;
+
+           }
+       }
+//Estado 2
+       private int Estado_2()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               case 'A':
+                   buffer += simbolo.ToString();
+                   return Estado_3();
+                  // break;
+               default:
+                   return 0;
+                  // break;
+
+           }
+
+       }
+
+
+       //Estado 3
+
+       private int Estado_3()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               case 'S':
+                   buffer += simbolo.ToString();
+                   return Estado_4();
+                  // break;
+               default:
+                   return 0;
+                  // break;
+
+           }
+
+       }
+
+
+       //EStado 4  
+       private int Estado_4()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               case 'E':
+                   buffer += simbolo.ToString();
+
+                   return Estado_aceptacion();
+                   break;
+               default:
+                   return 0;
+                  //break;
+
+           }
+
+       }
+
+       //Aceptacion Tokens
+       internal int Estado_aceptacion()
+       {
+
+           char simbolo = Leer();
+           //Estado de acptacion TOKENS
+           return Estado_llamar(simbolo);
+
+
+
+
+
+       }
+
+
+       //Mostrar Tokes
+
+       internal int Estado_llamar(char Simbolo)
+       {
+           if (Simbolo == ' ' || Simbolo == '\n')
+           {
+
+              
+
+               MessageBox.Show(buffer);
+               return Estado_0();
+           }
+
+           else
+           {
+               MessageBox.Show("TOKEN",buffer);
+               return Estado_0(Simbolo);
+           }
+       }
+
+
+
+
+       /// <summary>
+       /// Estado  6
+       /// </summary>
+       /// <returns></returns>
+
+       private int Estado_6()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               case 'N':
+                   buffer += simbolo.ToString();
+
+                   return Estado_7();
+                   break;
+               default:
+                   return 0;
+               //break;
+
+           }
+
+       }
+       /// <summary>
+       /// ESTADO 7
+       /// </summary>
+       /// <returns></returns>
+       private int Estado_7()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               case 'P':
+                   buffer += simbolo.ToString();
+
+                   return Estado_8();
+                   break;
+               default:
+                   return 0;
+               //break;
+
+           }
+
+       }
+
+       /// <summary>
+       /// ESTADO 8
+       /// </summary>
+       /// <returns></returns>
+       /// 
+       private int Estado_8()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               case 'A':
+                   buffer += simbolo.ToString();
+
+                   return Estado_9();
+                   break;
+               default:
+                   return 0;
+               //break;
+
+           }
+
+       }
+
+       /// <summary>
+       /// ESTADO 9
+       /// </summary>
+       /// <returns></returns>
+       private int Estado_9()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               case 'S':
+                   buffer += simbolo.ToString();
+
+                   return Estado_10();
+                   break;
+               default:
+                   return 0;
+               //break;
+
+           }
+
+       }
+
+       /// <summary>
+       /// 
+       /// </summary>
+       /// <returns></returns>
+       private int Estado_10()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               case 'O':
+                   buffer += simbolo.ToString();
+
+                   return Estado_11();
+                   break;
+               default:
+                   return 0;
+               //break;
+
+           }
+
+       }
+
+       /// <summary>
+       /// ESTADO 11
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+
+       private int Estado_11()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               case 'D':
+                   buffer += simbolo.ToString();
+
+                   return Estado_12();
+                   break;
+               default:
+                   return 0;
+               //break;
+
+           }
+
+       }
+
+       /// <summary>
+       /// ESTADO 12
+       /// </summary>
+       /// <returns></returns>
+       /// 
+       private int Estado_12()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               case 'E':
+                   buffer += simbolo.ToString();
+
+                   return Estado_aceptacion();
+                   break;
+               default:
+                   return 0;
+               //break;
+
+           }
+
+       }
+       /// <summary>
+       /// ESTADO 15
+       /// </summary>
+       /// <returns></returns>
+        private int Estado_15()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               case 'E':
+                   buffer += simbolo.ToString();
+
+                   return Estado_16();
+                   break;
+               default:
+                   return 0;
+               //break;
+
+           }
+
+       }
+
+
+       /// <summary>
+       /// ESTADO 16
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_16()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'O':
+                    buffer += simbolo.ToString();
+
+                    return Estado_17();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+       /// <summary>
+       /// ESTADO 17
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_17()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'T':
+                    buffer += simbolo.ToString();
+
+                    return Estado_18();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 18
+       /// </summary>
+       /// <returns></returns>
+
+        private int Estado_18()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'R':
+                    buffer += simbolo.ToString();
+
+                    return Estado_19();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 19
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_19()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'O':
+                    buffer += simbolo.ToString();
+
+                    return Estado_20();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 20
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+        private int Estado_20()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'M':
+                    buffer += simbolo.ToString();
+
+                    return Estado_21();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+       /// <summary>
+       /// ESTADO 21
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+        private int Estado_21()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'O':
+                    buffer += simbolo.ToString();
+
+                    return Estado_22();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+
+       /// <summary>
+       /// ESTADO 22
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_22()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'D':
+                    buffer += simbolo.ToString();
+
+                    return Estado_23();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 23
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+        private int Estado_23()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'O':
+                    buffer += simbolo.ToString();
+
+                    return Estado_aceptacion();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 27
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+        private int Estado_27()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'N':
+                    buffer += simbolo.ToString();
+
+                    return Estado_28();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 28
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_28()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'T':
+                    buffer += simbolo.ToString();
+
+                    return Estado_29();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 29
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+        private int Estado_29()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'O':
+                    buffer += simbolo.ToString();
+
+                    return Estado_30();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 30
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_30()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'N':
+                    buffer += simbolo.ToString();
+
+                    return Estado_31();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// EsTADO 31
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_31()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'C':
+                    buffer += simbolo.ToString();
+
+                    return Estado_32();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 32
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+        private int Estado_32()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'E':
+                    buffer += simbolo.ToString();
+
+                    return Estado_33();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 33
+       /// </summary>
+       /// <returns></returns>
+
+        private int Estado_33()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'S':
+                    buffer += simbolo.ToString();
+
+                    return Estado_aceptacion();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 36
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+        private int Estado_36()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'I':
+                    buffer += simbolo.ToString();
+
+                    return Estado_37();
+                    break;
+                default:
+                    return 0;
+                break;
+
+                case 'U':
+                buffer += simbolo.ToString();
+
+                return Estado_57();
+                break;
+            
+                return 0;
+                break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 37
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_37()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'N':
+                    buffer += simbolo.ToString();
+
+                    return Estado_38();
+                    break;
+                default:
+                    return 0;
+                //break;
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 38
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_38()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'S':
+                    buffer += simbolo.ToString();
+
+                    return Estado_51();
+                    break;
+                default:
+                    return 0;
+                break;
+
+                case 'P':
+                buffer += simbolo.ToString();
+
+                return Estado_47();
+                break;
+  
+                return 0;
+                break;
+
+                case 'M':
+                buffer += simbolo.ToString();
+
+                return Estado_39();
+                break;
+            //    default:
+                return 0;
+                break;
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 39
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+        private int Estado_39()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'I':
+                    buffer += simbolo.ToString();
+
+                    return Estado_40();
+                    break;
+                default:
+                    return 0;
+                    break;
+
+               
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 40
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+        private int Estado_40()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'E':
+                    buffer += simbolo.ToString();
+
+                    return Estado_41();
+                    break;
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 41
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+        private int Estado_41()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'N':
+                    buffer += simbolo.ToString();
+
+                    return Estado_42();
+                    break;
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 42
+       /// </summary>
+       /// <returns></returns>
+
+        private int Estado_42()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'T':
+                    buffer += simbolo.ToString();
+
+                    return Estado_43();
+                    break;
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 43
+       /// </summary>
+       /// <returns></returns>
+
+        private int Estado_43()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'R':
+                    buffer += simbolo.ToString();
+
+                    return Estado_44();
+                    break;
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 44
+       /// </summary>
+       /// <returns></returns>
+
+        private int Estado_44()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'A':
+                    buffer += simbolo.ToString();
+
+                    return Estado_45();
+                    break;
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+       /// <summary>
+       /// ESTAD 45
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_45()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'S':
+                    buffer += simbolo.ToString();
+
+                    return Estado_aceptacion();
+                    break;
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+       /// <summary>
+       /// ESTADO 47
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_47()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'A':
+                    buffer += simbolo.ToString();
+
+                    return Estado_48();
+                    break;
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 48
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_48()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'R':
+                    buffer += simbolo.ToString();
+
+                    return Estado_49();
+                    break;
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+
+
+       /// <summary>
+       /// ESTADO 49
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_49()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'A':
+                    buffer += simbolo.ToString();
+
+                    return Estado_aceptacion();
+                    break;
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 50
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_51()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'I':
+                    buffer += simbolo.ToString();
+
+                    return Estado_aceptacion();
+                    break;
+                case 'E':
+                    buffer += simbolo.ToString();
+
+                    return Estado_53();
+                    break;
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 53
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+        private int Estado_53()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'G':
+                    buffer += simbolo.ToString();
+
+                    return Estado_54();
+                    break;
+               
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 54
+       /// </summary>
+       /// <returns></returns>
+       /// 
+
+
+        private int Estado_54()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'U':
+                    buffer += simbolo.ToString();
+
+                    return Estado_55();
+                    break;
+
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 55
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_55()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'N':
+                    buffer += simbolo.ToString();
+
+                    return Estado_aceptacion();
+                    break;
+
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 57
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_57()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'N':
+                    buffer += simbolo.ToString();
+
+                    return Estado_58();
+                    break;
+
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 58
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_58()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'C':
+                    buffer += simbolo.ToString();
+
+                    return Estado_59();
+                    break;
+
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 59
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_59()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'I':
+                    buffer += simbolo.ToString();
+
+                    return Estado_60();
+                    break;
+
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 60
+       /// </summary>
+       /// <returns></returns>
+       /// 
+        private int Estado_60()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'O':
+                    buffer += simbolo.ToString();
+
+                    return Estado_61();
+                    break;
+
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+
+       /// <summary>
+       /// ESTADO 61
+       /// </summary>
+       /// <returns></returns>
+
+        private int Estado_61()
+        {
+            char simbolo = Leer();
+            switch (simbolo)
+            {
+                case 'N':
+                    buffer += simbolo.ToString();
+
+                    return Estado_aceptacion();
+                    break;
+
+                default:
+                    return 0;
+                    break;
+
+
+            }
+
+        }
+       private char Leer ()
+           //Definimos el metodo leer para la posicion
+
+       {
+           char Caracter;
+           if (posicion <= temp)
+           {
+               Caracter = char.Parse(_Cadena.Substring(posicion, 1));
+               posicion += 1;
+               return Caracter;
+
+           }
+           else
+           {
+               return '\n';
+
+           }
+       }
+       //metodo a llamar por grafo
+
+       internal int Estado_0()
+       {
+           char simbolo = Leer();
+           switch (simbolo)
+           {
+               //estados conectados a cero
+
+               case 'C':
+                   buffer += simbolo.ToString();
+                   return Estado_1();
+                   break;
+               default:
+
+              /* case 'S':
+                   buffer += simbolo.ToString();
+                   return Estado_116();
+                   break;
+               default:
+               */
+               case 'E':
+                   buffer += simbolo.ToString();
+                   return Estado_27();
+                   break;
+              
+/*
+               case 'P':
+                   buffer += simbolo.ToString();
+                   return Estado_90();
+                   break;
+               default:
+ */
+               case 'D':
+                   buffer += simbolo.ToString();
+                   return Estado_15();
+                   break;
+              
+                   return 0;
+                 break;
+/*
+               case 'R':
+                   buffer += simbolo.ToString();
+                   return Estado_108();
+                   break;
+               default:
+*/
+                   /*
+               case 'M':
+                   buffer += simbolo.ToString();
+                   return Estado_76();
+                   break;
+               default:
+                   */
+               case 'F':
+                   buffer += simbolo.ToString();
+                   return Estado_36();
+                   break;
+               
+
+                   /*
+               case 'H':
+                   buffer += simbolo.ToString();
+                   return Estado_63();
+                   break;
+               default:
+                    */
+                   return 0;  
+                    
+           }
+
+
+       }
+
+    }
+}
